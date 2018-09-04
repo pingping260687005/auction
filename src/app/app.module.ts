@@ -19,7 +19,6 @@ import { UserCommentComponent } from './user-comment/user-comment.component';
 import { StateEmitService } from './shared/state-emit.service';
 import { StateUpdateSubjectService } from './shared/state-update-subject.service';
 import { HttpModule } from '@angular/http';
-import { 快速建一个组件Component } from './mycontrol/快速建一个组件/快速建一个组件.component';
 
 
 const routes: Routes=[
@@ -39,8 +38,7 @@ const routes: Routes=[
     ProductDetailComponent,
     HomeComponent,
     FilterValuePipe,
-    UserCommentComponent,
-    快速建一个组件Component
+    UserCommentComponent
   ],
   imports: [
     BrowserModule,

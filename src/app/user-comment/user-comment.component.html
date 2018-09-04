@@ -1,0 +1,9 @@
+<div class="form-group">
+<label for="content">评价内容：</label>
+  <textarea class="form-control" id="content" [(ngModel)]="contentText"></textarea>
+  <app-stars [rate]="rate" [canClick]="true"></app-stars>
+  <div class="form-group">
+      <button type="submit" class="btn btn-primary btn-block" (click)="onSave()" >添加</button>
+  </div>
+</div>
+

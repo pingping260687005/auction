@@ -1,0 +1,22 @@
+<form name="searchForm" role="form" [formGroup]="searchForm">
+<div class="form-group">
+  <label for="productName">商品名称：</label>
+  <input type="text" id="productName" class="form-control" placeholder="商品名称"/>
+</div>  
+<div class="form-group">
+  <label for="productPrice">商品价格：</label>
+  <input type="number" id="productPrice" class="form-control" placeholder="商品价格"/>
+</div>  
+<div class="form-group">
+  <label for="productType">商品类别：</label>
+  <select id="productType" class="form-control ">
+    <option value =""></option>
+    <option value ="volvo">Volvo</option>
+    <option value ="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+</div>  
+<div class="form-group">
+   <button class="btn btn-primary btn-block" type="submit">提交</button>
+</div> 

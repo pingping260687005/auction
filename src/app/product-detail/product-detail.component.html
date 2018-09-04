@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="thumbnail">
+    <img src="http://temp.im/300x150" style="width:100%" alt="link">
+    <div class="caption">
+      <h4 class="pull-right">{{product.price}}元</h4>
+      <h4>{{product.name}}</h4>
+    </div>
+    <p>{{product.desc}}</p>
+    <div class="pull-right">{{comments.length}} 个评价</div>
+    <app-stars [rate]="product.rate" [canClick]="true"></app-stars>
+  </div>
+
+  <div class="row">
+    <!-- <app-user-comment [product]="product" (commentState)="commentStateUpdate($event)"></app-user-comment> -->
+    <div class="form-group">
+        <label for="content">评价内容：</label>
+          <textarea class="form-control" id="content" [(ngModel)]="contentText"></textarea>
+          <app-stars [(rate)]="newRate" [canClick]="true"></app-stars>
+          <div class="form-group">
+              <button type="submit" class="btn btn-primary btn-block" (click)="onSave()" >添加</button>
+          </div>
+        </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor='let comment of comments' class='col-md-12'>
+      <div class="caption commentCaption">
+        <h4 class="pull-right">{{comment.date | date:"yyyy:MM:dd HH:mm:ss"}}</h4>
+        <h4>{{comment.user}}</h4>
+        <p>{{comment.content}}</p>
+        <app-stars [rate]="comment.rate" [canClick]="false"></app-stars>
+      </div>
+      <hr>
+    </div>
+  </div>
+</div>

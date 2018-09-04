@@ -1,0 +1,18 @@
+<div class="row">
+  <div class='searchFilter col-md-12 '>
+    <input type='text' class='form-control' placeholder="搜索商品名" (input)="setProductName($event)">
+  </div>
+</div>
+<div class="row product">
+  <div class="col-md-4 col-sm-6" *ngFor="let product of products | filterValue:'name':productName">
+    <div class="thumbnail">
+      <img src="http://temp.im/300x180" style="width:100%" alt="link">
+      <div class="caption">
+        <h4 class="pull-right">{{product.price}}元</h4>
+        <h4>
+          <a [routerLink]="['/detail', product.id]">{{product.name}}</a>
+        </h4>
+      </div>
+      <p>{{product.desc}}</p>
+      <app-stars [rate]="product.rate" [canClick]="false"></app-stars>
+    </div>

@@ -252,13 +252,20 @@ getFromChild($event){
 生命周期大致顺序：
 // 父-> 子
 constructor
+
 dngOnChanges// 输入属性发生变化是调用
+
 ngOnInit//初始化一次
+
 ngDoCheck// 每次页面事件或是改变都调用
+
 ngAfterConentInit// ngcontent 插入内容的渲染结束
+
 ngAfterContentChecked//ngcontent checked,每次页面事件或是改变都调用
+
 // 子 -> 父
 ngAfterViewInit// view 加载完毕
+
 ngAfterViewChecked//每次页面事件或是改变都调用
 
 
